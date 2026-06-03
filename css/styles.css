@@ -27,14 +27,17 @@ Abaixo o comando está dizendo pra o arquivo atual "styles.css" importar os arqu
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
 body {
   margin: 0px;
-  font-family: 'Kulim Park', sans-serif;
+  font-family: "Kulim Park", sans-serif;
 }
 
 p {
@@ -76,7 +79,7 @@ p {
 
 /* LINKS */
 .menu a {
-  text-decoration:none;
+  text-decoration: none;
   color: white;
   font-size: 18px;
   transition: 0.3s;
@@ -85,7 +88,7 @@ p {
 /* Dentro do :hover as ações só acontecem ao passar o mouse por cima */
 .menu a:hover {
   color: #9c3cfb;
-  text-decoration:underline;
+  text-decoration: underline;
   text-underline-offset: 16px;
 }
 
@@ -142,7 +145,10 @@ p {
   border-radius: 30px;
   margin-right: 12px;
   cursor: pointer;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
   border: 1px solid rgba(156, 60, 251, 0.35);
 }
 
@@ -160,7 +166,10 @@ p {
   border-radius: 30px;
   margin-right: 12px;
   cursor: pointer;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
   border: 1px solid rgba(156, 60, 251, 0.35);
 }
 
@@ -169,7 +178,6 @@ p {
   transform: translateY(-1px);
   box-shadow: 0 14px 24px rgba(13, 5, 39, 0.35);
 }
-
 
 .btnCadastro {
   min-width: 150px;
@@ -227,7 +235,8 @@ p {
 /* CAIXA DO MODAL */
 .cad {
   margin: 10px;
-  width: 85%;
+  width: 90%;
+  font-family: "Kulim Park", sans-serif;
 }
 
 .modal-content {
@@ -269,7 +278,6 @@ p {
 
   outline: none;
   transition: 0.2s;
-
 }
 
 /* FOCO */
@@ -304,16 +312,20 @@ p {
   color: #9c3cfb;
 }
 
-.obs{
-margin: 10px;
-width: 91%;
-border-radius: 5px;
-background: #2d013e;
-resize: none;
-border: 1px solid #4B3364;
-/* width: %; */
-transition: 0.1s;
-outline: 0;
+.obs {
+  margin: 10px;
+  width: 90%;
+  border-radius: 5px;
+  background: #24003d;
+  resize: none;
+  border: 1px solid #4b3364;
+  /* width: %; */
+  transition: 0.1s;
+  outline: 0;
+  color: white;
+  font-family: "Kulim Park", sans-serif;
+  padding-top: 10px;
+  padding-left: 10px;
 }
 
 .obs:focus {
@@ -332,12 +344,7 @@ outline: 0;
   flex-direction: column;
   align-items: center;
   gap: 50px;
-  background: linear-gradient(
-    90deg,
-    #14033a 0%,
-    #140128 50%,
-    #052754 100%
-  );
+  background: linear-gradient(90deg, #14033a 0%, #140128 50%, #052754 100%);
 }
 
 .section-icon,
@@ -404,7 +411,16 @@ outline: 0;
   border: 1px solid rgba(156, 60, 251, 0.25);
   padding: 24px;
   border-radius: 24px;
-  box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.08), 0 16px 28px rgba(0, 0, 0, 0.2);
+  box-shadow:
+    inset 0 0 1px rgba(255, 255, 255, 0.08),
+    0 16px 28px rgba(0, 0, 0, 0.2);
+}
+
+.project-card:hover {
+  cursor: pointer;
+  box-shadow:
+    inset 0 0 1px rgb(136, 55, 233),
+    0 16px 28px rgba(136, 55, 233, 0.2);
 }
 
 .project-logo {
@@ -430,7 +446,6 @@ outline: 0;
   color: #dcd7ff;
   text-align: left;
 }
-
 /* ! SEÇÃO TECNOLOGIAS ! */
 
 .main2section {
@@ -445,7 +460,7 @@ outline: 0;
   display: flex; /* deixa lado a lado */
   justify-content: center;
   gap: 40px; /* espaço entre itens */
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 /* ITEM INDIVIDUAL */
@@ -453,13 +468,15 @@ outline: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  gap: 20px;
 }
 
 /* ÍCONE */
 .tech-item img {
-  width: 60px;
-  height: 60px;
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
 }
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -509,18 +526,6 @@ outline: 0;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-.css {
-  max-height: 45%;
-  max-width: 85%;
-  margin-top: 18%;
-}
-
-.javalogo {
-  max-height: 60%;
-  max-width: 85%;
-  margin-top: 5%;
-}
-
 @media (max-width: 768px) {
   * {
     margin: 0;
@@ -543,7 +548,7 @@ outline: 0;
     gap: 2rem;
   }
   .downHeader {
-     display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 1rem;
@@ -563,12 +568,12 @@ outline: 0;
     display: none;
   }
   #format {
-    color: #9838F7;
+    color: #9838f7;
   }
   header {
     max-width: 100%;
   }
-/* * {
+  /* * {
     outline: 1px solid red;
     } */
   .btn {
@@ -579,35 +584,33 @@ outline: 0;
     gap: 0.5rem;
   }
   .textProjeto {
-  border-left: 0; /* linha vertical */
-  padding-left: 0; /* afasta o texto da linha */
-}
-  .textSobre{
+    border-left: 0; /* linha vertical */
+    padding-left: 0; /* afasta o texto da linha */
+  }
+  .textSobre {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .main1section{
+
+  .main1section {
     gap: 35px;
   }
-  .tech-container{
-    display: flex;
-    flex-direction: row;
-  }
- .team-container {
+
+  .team-container {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-}
+  }
 
-.member {
+  .member {
     width: 100%;
     max-width: 100%;
-}
-.social{
-  display: flex;
-  flex-direction: row;
-}
+  }
+  .social {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 /* ! FOOTER ! RODAPÉ ! */
@@ -647,6 +650,7 @@ outline: 0;
 }
 
 .social img {
+  
   height: 35px; /* tamanho dos ícones */
   cursor: pointer; /* cursor de clique */
   transition: 0.3s;
@@ -656,7 +660,5 @@ outline: 0;
   transform: scale(1.1); /* leve aumento ao passar o mouse */
 }
 
-
 /*---------------------------------------------------------------------------------------------------------------------------------------------*/
 /*FIM--------------------------------------------------------------------------------------------------------------------------------------------*/
-
